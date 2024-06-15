@@ -7,6 +7,7 @@ export default defineUserConfig({
   lang: 'ru-RU',
   title: 'AtomSkills',
   description: 'Здесь вы познаете силу',
+  base: '/atom_docs/',
   theme: hopeTheme({
     darkmode: 'disable',
     navbar: [
