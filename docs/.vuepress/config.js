@@ -1,44 +1,49 @@
 import { defineUserConfig } from 'vuepress/cli'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { hopeTheme } from 'vuepress-theme-hope'
-import { shikiPlugin } from "@vuepress/plugin-shiki"
 
 export default defineUserConfig({
   lang: 'ru-RU',
-  title: 'AtomSkills',
+  title: 'ВелдБокс',
   description: 'Здесь вы познаете силу',
   base: '/atom_docs/',
   theme: hopeTheme({
     darkmode: 'disable',
     navbar: [
       {text: 'Главная', link: '/'},
-      {text: 'Развертка', link: '/deploy/'},
-      {text: 'Dev-документация', link: '/dev_docs/'},
+      {text: 'Схема БД', link: '/database/'},
+      {text: 'Архитектура', link: '/solution_architecture/'},
+      {text: 'Проект', link: '/project/'},
     ],
     sidebar: [
       '/',
-      '/deploy/',
       {
-        text: 'Документация для разработчиков',
-        link: '/dev_docs/',
-        prefix: '/dev_docs/',
+        text: 'Устройство модели БД',
+        link: '/database/',
+        prefix: '/database/',
+        collapsible: true,
+      },
+      {
+        text: 'Архитектура приложения',
+        link: '/solution_architecture/',
+        prefix: '/solution_architecture/',
+        collapsible: true,
+      },
+      {
+        text: 'Схема проекта',
+        link: '/project/',
+        prefix: '/project/',
         collapsible: true,
         children: [
-          "database_model.html",
-          "endpoints.html",
-          "buttons.html",
-          "jwts.html"
+          "frontend.html",
+          "backend.html"
         ]
       },
       {
-        text: 'Руководство пользователя',
-        link: '/user_case/',
-        prefix: '/user_case/',
+        text: 'Документация API',
+        link: '/api/',
+        prefix: '/api/',
         collapsible: true,
-        children: [
-          "authorization.html",
-          "send_data.html"
-        ]
       }
     ],
   }),
