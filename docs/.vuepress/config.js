@@ -8,7 +8,7 @@ export default defineUserConfig({
   description: 'Здесь вы познаете силу',
   base: '/atom_docs/',
   theme: hopeTheme({
-    darkmode: 'disable',
+    darkmode: 'enable',
     navbar: [
       {text: 'Главная', link: '/'},
       {text: 'Схема БД', link: '/database/'},
@@ -41,9 +41,14 @@ export default defineUserConfig({
       },
       {
         text: 'Документация API',
-        link: '/api/',
         prefix: '/api/',
         collapsible: true,
+        children: [
+          "auth.html",
+          "lessons.html",
+          "tasks.html",
+          "topics.html"
+        ]
       }
     ],
   }),
