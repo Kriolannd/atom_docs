@@ -2,7 +2,11 @@ export const redirects = JSON.parse("{}")
 
 export const routes = Object.fromEntries([
   ["/", { loader: () => import(/* webpackChunkName: "index.html" */"E:/atom_docs/docs/.vuepress/.temp/pages/index.html.js"), meta: {"t":"Техническая документация ВелдБокс"} }],
+  ["/api/auth.html", { loader: () => import(/* webpackChunkName: "api_auth.html" */"E:/atom_docs/docs/.vuepress/.temp/pages/api/auth.html.js"), meta: {"t":"Авторизация и регистрация"} }],
   ["/api/", { loader: () => import(/* webpackChunkName: "api_index.html" */"E:/atom_docs/docs/.vuepress/.temp/pages/api/index.html.js"), meta: {"t":"Документация API"} }],
+  ["/api/lessons.html", { loader: () => import(/* webpackChunkName: "api_lessons.html" */"E:/atom_docs/docs/.vuepress/.temp/pages/api/lessons.html.js"), meta: {"t":"Учебные материалы"} }],
+  ["/api/tasks.html", { loader: () => import(/* webpackChunkName: "api_tasks.html" */"E:/atom_docs/docs/.vuepress/.temp/pages/api/tasks.html.js"), meta: {"t":"Задания"} }],
+  ["/api/topics.html", { loader: () => import(/* webpackChunkName: "api_topics.html" */"E:/atom_docs/docs/.vuepress/.temp/pages/api/topics.html.js"), meta: {"t":"Темы"} }],
   ["/database/", { loader: () => import(/* webpackChunkName: "database_index.html" */"E:/atom_docs/docs/.vuepress/.temp/pages/database/index.html.js"), meta: {"t":"Структура БД"} }],
   ["/project/backend.html", { loader: () => import(/* webpackChunkName: "project_backend.html" */"E:/atom_docs/docs/.vuepress/.temp/pages/project/backend.html.js"), meta: {"t":"Backend-проект"} }],
   ["/project/frontend.html", { loader: () => import(/* webpackChunkName: "project_frontend.html" */"E:/atom_docs/docs/.vuepress/.temp/pages/project/frontend.html.js"), meta: {"t":"Frontend-проект"} }],
