@@ -1,4 +1,4 @@
-import comp from "E:/atom_docs/docs/.vuepress/.temp/pages/solution_architecture/endpoints.html.vue"
+import comp from "/Users/karelio/Projects/atom_skills/atom_docs/docs/.vuepress/.temp/pages/solution_architecture/endpoints.html.vue"
 const data = JSON.parse("{\"path\":\"/solution_architecture/endpoints.html\",\"title\":\"API\",\"lang\":\"ru-RU\",\"frontmatter\":{},\"headers\":[],\"readingTime\":{\"minutes\":0.05,\"words\":14},\"filePathRelative\":\"solution_architecture/endpoints.md\"}")
 export { comp, data }
 

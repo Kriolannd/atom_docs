@@ -1,4 +1,4 @@
-import comp from "E:/atom_docs/docs/.vuepress/.temp/pages/dev_docs/database_model.html.vue"
+import comp from "/Users/karelio/Projects/atom_skills/atom_docs/docs/.vuepress/.temp/pages/dev_docs/database_model.html.vue"
 const data = JSON.parse("{\"path\":\"/dev_docs/database_model.html\",\"title\":\"Модель базы данных\",\"lang\":\"ru-RU\",\"frontmatter\":{},\"headers\":[],\"readingTime\":{\"minutes\":0.04,\"words\":11},\"filePathRelative\":\"dev_docs/database_model.md\"}")
 export { comp, data }
 

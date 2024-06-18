@@ -1,4 +1,4 @@
-import comp from "E:/atom_docs/docs/.vuepress/.temp/pages/solution_architecture/buttons.html.vue"
+import comp from "/Users/karelio/Projects/atom_skills/atom_docs/docs/.vuepress/.temp/pages/solution_architecture/buttons.html.vue"
 const data = JSON.parse("{\"path\":\"/solution_architecture/buttons.html\",\"title\":\"Кнопки\",\"lang\":\"ru-RU\",\"frontmatter\":{},\"headers\":[],\"readingTime\":{\"minutes\":0.04,\"words\":11},\"filePathRelative\":\"solution_architecture/buttons.md\"}")
 export { comp, data }
 

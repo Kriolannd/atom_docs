@@ -1,4 +1,4 @@
-import comp from "E:/atom_docs/docs/.vuepress/.temp/pages/api/index.html.vue"
+import comp from "/Users/karelio/Projects/atom_skills/atom_docs/docs/.vuepress/.temp/pages/api/index.html.vue"
 const data = JSON.parse("{\"path\":\"/api/\",\"title\":\"Документация API\",\"lang\":\"ru-RU\",\"frontmatter\":{},\"headers\":[],\"readingTime\":{\"minutes\":0.01,\"words\":2},\"filePathRelative\":\"api/index.md\"}")
 export { comp, data }
 

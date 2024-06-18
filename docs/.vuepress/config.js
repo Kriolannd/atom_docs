@@ -8,6 +8,12 @@ export default defineUserConfig({
   description: 'Здесь вы познаете силу',
   base: '/atom_docs/',
   theme: hopeTheme({
+    plugins: {
+      search: true,
+      // search: {
+      //   plugin options here
+      // },
+    },
     darkmode: 'enable',
     navbar: [
       {text: 'Главная', link: '/'},

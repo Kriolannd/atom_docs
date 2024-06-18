@@ -1,4 +1,4 @@
-import comp from "E:/atom_docs/docs/.vuepress/.temp/pages/index.html.vue"
+import comp from "/Users/karelio/Projects/atom_skills/atom_docs/docs/.vuepress/.temp/pages/index.html.vue"
 const data = JSON.parse("{\"path\":\"/\",\"title\":\"Техническая документация ВелдБокс\",\"lang\":\"ru-RU\",\"frontmatter\":{},\"headers\":[],\"readingTime\":{\"minutes\":0.11,\"words\":34},\"filePathRelative\":\"README.md\"}")
 export { comp, data }
 

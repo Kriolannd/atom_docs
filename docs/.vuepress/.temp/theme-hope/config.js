@@ -1,11 +1,11 @@
 import { defineClientConfig } from "vuepress/client";
-import { HopeIcon, Layout, NotFound, injectDarkmode, setupDarkmode, setupSidebarItems, scrollPromise } from "E:/atom_docs/node_modules/vuepress-theme-hope/lib/bundle/export.js";
+import { HopeIcon, Layout, NotFound, injectDarkmode, setupDarkmode, setupSidebarItems, scrollPromise } from "/Users/karelio/Projects/atom_skills/atom_docs/node_modules/vuepress-theme-hope/lib/bundle/export.js";
 
-import { defineCatalogInfoGetter } from "E:/atom_docs/node_modules/@vuepress/plugin-catalog/lib/client/index.js"
+import { defineCatalogInfoGetter } from "/Users/karelio/Projects/atom_skills/atom_docs/node_modules/@vuepress/plugin-catalog/lib/client/index.js"
 import { h } from "vue"
 
-import "E:/atom_docs/node_modules/@vuepress/helper/lib/client/styles/normalize.css";
-import "E:/atom_docs/node_modules/vuepress-theme-hope/lib/bundle/styles/all.scss";
+import "/Users/karelio/Projects/atom_skills/atom_docs/node_modules/@vuepress/helper/lib/client/styles/normalize.css";
+import "/Users/karelio/Projects/atom_skills/atom_docs/node_modules/vuepress-theme-hope/lib/bundle/styles/all.scss";
 
 defineCatalogInfoGetter((meta) => {
   const title = meta.t;
