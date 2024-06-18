@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="ru-RU" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.13" />
+    <meta name="theme" content="VuePress Theme Hope 2.0.0-rc.48" />
+    <style>
+      html {
+        background: var(--bg-color, #fff);
+      }
+
+      html[data-theme="dark"] {
+        background: var(--bg-color, #1d1e1f);
+      }
+
+      body {
+        background: var(--bg-color);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <title>Backend-проект | ВелдБокс</title><meta name="description" content="Здесь вы познаете силу">
+    <link rel="preload" href="/atom_docs/assets/style-DfGMk7CG.css" as="style"><link rel="stylesheet" href="/atom_docs/assets/style-DfGMk7CG.css">
+    <link rel="modulepreload" href="/atom_docs/assets/app-Chc13kEl.js"><link rel="modulepreload" href="/atom_docs/assets/backend.html-BbnK6WY6.js"><link rel="modulepreload" href="/atom_docs/assets/plugin-vue_export-helper-DlAUqK2U.js">
+    <link rel="prefetch" href="/atom_docs/assets/index.html-CuPNu1tP.js" as="script"><link rel="prefetch" href="/atom_docs/assets/auth.html-BsG-ocbv.js" as="script"><link rel="prefetch" href="/atom_docs/assets/index.html-DehctG3_.js" as="script"><link rel="prefetch" href="/atom_docs/assets/lessons.html-D-Id9-la.js" as="script"><link rel="prefetch" href="/atom_docs/assets/tasks.html-Cs3qFbxJ.js" as="script"><link rel="prefetch" href="/atom_docs/assets/topics.html-BRnOc-eB.js" as="script"><link rel="prefetch" href="/atom_docs/assets/index.html-Dgv7N2Mo.js" as="script"><link rel="prefetch" href="/atom_docs/assets/frontend.html-CwNHJwml.js" as="script"><link rel="prefetch" href="/atom_docs/assets/index.html-1jN3rxhu.js" as="script"><link rel="prefetch" href="/atom_docs/assets/buttons.html-jdUur4VH.js" as="script"><link rel="prefetch" href="/atom_docs/assets/database_model.html-n1sUf-6j.js" as="script"><link rel="prefetch" href="/atom_docs/assets/endpoints.html-Cc_PXxjZ.js" as="script"><link rel="prefetch" href="/atom_docs/assets/index.html-4QpFJ5MK.js" as="script"><link rel="prefetch" href="/atom_docs/assets/jwts.html-m6PsxI4i.js" as="script"><link rel="prefetch" href="/atom_docs/assets/404.html-DfQqGg5D.js" as="script"><link rel="prefetch" href="/atom_docs/assets/photoswipe.esm-GXRgw7eJ.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><!--[--><!--[--><span tabindex="-1"></span><a href="#main-content" class="vp-skip-link sr-only">Перейти к основному содержанию</a><!--]--><!--[--><div class="theme-container external-link-icon has-toc"><!--[--><header id="navbar" class="vp-navbar"><div class="vp-navbar-start"><button type="button" class="vp-toggle-sidebar-button" title="Toggle Sidebar"><span class="icon"></span></button><!----><!--[--><a class="route-link vp-brand" href="/atom_docs/"><!----><!----><span class="vp-site-name">ВелдБокс</span></a><!--]--><!----></div><div class="vp-navbar-center"><!----><!--[--><nav class="vp-nav-links"><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/atom_docs/" aria-label="Главная"><!---->Главная<!----></a></div><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/atom_docs/database/" aria-label="Схема БД"><!---->Схема БД<!----></a></div><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/atom_docs/solution_architecture/" aria-label="Архитектура"><!---->Архитектура<!----></a></div><div class="vp-nav-item hide-in-mobile"><a class="route-link route-link-active auto-link" href="/atom_docs/project/" aria-label="Проект"><!---->Проект<!----></a></div></nav><!--]--><!----></div><div class="vp-navbar-end"><!----><!--[--><!----><!----><!----><!----><!--]--><!----><button type="button" class="vp-toggle-navbar-button" aria-label="Toggle Navbar" aria-expanded="false" aria-controls="nav-screen"><span><span class="vp-top"></span><span class="vp-middle"></span><span class="vp-bottom"></span></span></button></div></header><!----><!--]--><!----><div class="toggle-sidebar-wrapper"><span class="arrow start"></span></div><aside id="sidebar" class="vp-sidebar"><!----><ul class="vp-sidebar-links"><li><a class="route-link auto-link vp-sidebar-link" href="/atom_docs/" aria-label="Техническая документация ВелдБокс"><!---->Техническая документация ВелдБокс<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/atom_docs/database/" aria-label="Устройство модели БД"><!---->Устройство модели БД<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/atom_docs/solution_architecture/" aria-label="Архитектура приложения"><!---->Архитектура приложения<!----></a></li><li><section class="vp-sidebar-group"><button class="vp-sidebar-header clickable active" type="button"><!----><a class="route-link route-link-active auto-link vp-sidebar-title no-external-link-icon" href="/atom_docs/project/" aria-label="Схема проекта"><!---->Схема проекта<!----></a><span class="vp-arrow down"></span></button><ul class="vp-sidebar-links"><li><a class="route-link auto-link vp-sidebar-link" href="/atom_docs/project/frontend.html" aria-label="Frontend-проект"><!---->Frontend-проект<!----></a></li><li><a class="route-link route-link-active auto-link vp-sidebar-link active" href="/atom_docs/project/backend.html" aria-label="Backend-проект"><!---->Backend-проект<!----></a></li></ul></section></li><li><section class="vp-sidebar-group"><button class="vp-sidebar-header clickable" type="button"><!----><span class="vp-sidebar-title">Документация API</span><span class="vp-arrow end"></span></button><!----></section></li></ul><!----></aside><!--[--><main id="main-content" class="vp-page"><!--[--><!----><!----><nav class="vp-breadcrumb disable"></nav><div class="vp-page-title"><h1><!---->Backend-проект</h1><div class="page-info"><!----><!----><span class="page-date-info" aria-label="Дата написания📅" data-balloon-pos="up"><svg xmlns="http://www.w3.org/2000/svg" class="icon calendar-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="calendar icon" name="calendar"><path d="M716.4 110.137c0-18.753-14.72-33.473-33.472-33.473-18.753 0-33.473 14.72-33.473 33.473v33.473h66.993v-33.473zm-334.87 0c0-18.753-14.72-33.473-33.473-33.473s-33.52 14.72-33.52 33.473v33.473h66.993v-33.473zm468.81 33.52H716.4v100.465c0 18.753-14.72 33.473-33.472 33.473a33.145 33.145 0 01-33.473-33.473V143.657H381.53v100.465c0 18.753-14.72 33.473-33.473 33.473a33.145 33.145 0 01-33.473-33.473V143.657H180.6A134.314 134.314 0 0046.66 277.595v535.756A134.314 134.314 0 00180.6 947.289h669.74a134.36 134.36 0 00133.94-133.938V277.595a134.314 134.314 0 00-133.94-133.938zm33.473 267.877H147.126a33.145 33.145 0 01-33.473-33.473c0-18.752 14.72-33.473 33.473-33.473h736.687c18.752 0 33.472 14.72 33.472 33.473a33.145 33.145 0 01-33.472 33.473z"></path></svg><span><!----></span><meta property="datePublished" content="2024-06-15T19:44:55.000Z"></span><!----><span class="page-reading-time-info" aria-label="Время чтения⌛" data-balloon-pos="up"><svg xmlns="http://www.w3.org/2000/svg" class="icon timer-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="timer icon" name="timer"><path d="M799.387 122.15c4.402-2.978 7.38-7.897 7.38-13.463v-1.165c0-8.933-7.38-16.312-16.312-16.312H256.33c-8.933 0-16.311 7.38-16.311 16.312v1.165c0 5.825 2.977 10.874 7.637 13.592 4.143 194.44 97.22 354.963 220.201 392.763-122.204 37.542-214.893 196.511-220.2 389.397-4.661 5.049-7.638 11.651-7.638 19.03v5.825h566.49v-5.825c0-7.379-2.849-13.981-7.509-18.9-5.049-193.016-97.867-351.985-220.2-389.527 123.24-37.67 216.446-198.453 220.588-392.892zM531.16 450.445v352.632c117.674 1.553 211.787 40.778 211.787 88.676H304.097c0-48.286 95.149-87.382 213.728-88.676V450.445c-93.077-3.107-167.901-81.297-167.901-177.093 0-8.803 6.99-15.793 15.793-15.793 8.803 0 15.794 6.99 15.794 15.793 0 80.261 63.69 145.635 142.01 145.635s142.011-65.374 142.011-145.635c0-8.803 6.99-15.793 15.794-15.793s15.793 6.99 15.793 15.793c0 95.019-73.789 172.82-165.96 177.093z"></path></svg><span>Около 5 мин</span><meta property="timeRequired" content="PT5M"></span><!----><!----></div><hr></div><div class="vp-toc-placeholder"><aside id="toc"><!----><div class="vp-toc-header">На этой странице<button type="button" class="print-button" title="Печать"><svg xmlns="http://www.w3.org/2000/svg" class="icon print-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="print icon" name="print"><path d="M819.2 364.8h-44.8V128c0-17.067-14.933-32-32-32H281.6c-17.067 0-32 14.933-32 32v236.8h-44.8C145.067 364.8 96 413.867 96 473.6v192c0 59.733 49.067 108.8 108.8 108.8h44.8V896c0 17.067 14.933 32 32 32h460.8c17.067 0 32-14.933 32-32V774.4h44.8c59.733 0 108.8-49.067 108.8-108.8v-192c0-59.733-49.067-108.8-108.8-108.8zM313.6 160h396.8v204.8H313.6V160zm396.8 704H313.6V620.8h396.8V864zM864 665.6c0 25.6-19.2 44.8-44.8 44.8h-44.8V588.8c0-17.067-14.933-32-32-32H281.6c-17.067 0-32 14.933-32 32v121.6h-44.8c-25.6 0-44.8-19.2-44.8-44.8v-192c0-25.6 19.2-44.8 44.8-44.8h614.4c25.6 0 44.8 19.2 44.8 44.8v192z"></path></svg></button><div class="arrow end"></div></div><div class="vp-toc-wrapper"><ul class="vp-toc-list"><!--[--><li class="vp-toc-item"><a class="route-link vp-toc-link level2" href="#схема-проекта-в-виде-дерева-ascii">Схема проекта в виде дерева ASCII</a></li><!----><!--]--><!--[--><li class="vp-toc-item"><a class="route-link vp-toc-link level2" href="#dockerfile">Dockerfile</a></li><!----><!--]--><!--[--><li class="vp-toc-item"><a class="route-link vp-toc-link level2" href="#pom-xml">pom.xml</a></li><!----><!--]--><!--[--><li class="vp-toc-item"><a class="route-link vp-toc-link level2" href="#src-test-java-ru-atomskills-back-backapplicationtest-java">src/test/java/ru/atomskills/back/BackApplicationTest.java</a></li><!----><!--]--><!--[--><li class="vp-toc-item"><a class="route-link vp-toc-link level2" href="#src-main-java-ru-atomskills-back">src/main/java/ru/atomskills/back</a></li><li><ul class="vp-toc-list"><!--[--><li class="vp-toc-item"><a class="route-link vp-toc-link level3" href="#configs">configs</a></li><!----><!--]--><!--[--><li class="vp-toc-item"><a class="route-link vp-toc-link level3" href="#controllers">controllers</a></li><!----><!--]--><!--[--><li class="vp-toc-item"><a class="route-link vp-toc-link level3" href="#dto">dto</a></li><!----><!--]--><!--[--><li class="vp-toc-item"><a class="route-link vp-toc-link level3" href="#repositories">repositories</a></li><!----><!--]--><!--[--><li class="vp-toc-item"><a class="route-link vp-toc-link level3" href="#services">services</a></li><!----><!--]--><!--[--><li class="vp-toc-item"><a class="route-link vp-toc-link level3" href="#utils">utils</a></li><!----><!--]--></ul></li><!--]--></ul><div class="vp-toc-marker" style="top:-1.7rem;"></div></div><!----></aside></div><!----><div class="theme-hope-content"><h1 id="backend-проект" tabindex="-1"><a class="header-anchor" href="#backend-проект"><span>Backend-проект</span></a></h1><p>Backend представлен в виде <strong>Java Spring</strong> приложения. <strong>Maven</strong> используется в качестве фреймворка для автоматизации сборки проектов на основе описания их описания в файле <strong>pom.xml</strong> В проекте используется следующие основные библиотеки и расширения</p><ul><li>Spring Boot - для автономного запуска Java Spring приложения;</li></ul><hr><ul><li>PostgreSQL - для связи с СУБД PostgreSQL;</li></ul><hr><ul><li>Lombok - удобная библиотека для сокращения количества кода;</li></ul><hr><ul><li>JsonWebToken - библиотека для работы с JsonWebToken. Используется при авторизации и регистрации;</li></ul><hr><ul><li>Hibernate - Движок для работы с базами данных посредством ORM;</li></ul><h2 id="схема-проекта-в-виде-дерева-ascii" tabindex="-1"><a class="header-anchor" href="#схема-проекта-в-виде-дерева-ascii"><span>Схема проекта в виде дерева <strong>ASCII</strong></span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>Dockerfile</span></span>
+<span class="line"><span>pom.xml</span></span>
+<span class="line"><span>src/</span></span>
+<span class="line"><span>├─ main/</span></span>
+<span class="line"><span>│  ├─ resources/</span></span>
+<span class="line"><span>│  │  ├─ materials/</span></span>
+<span class="line"><span>│  │  │  ├─ features.json</span></span>
+<span class="line"><span>│  │  │  ├─ lessons/</span></span>
+<span class="line"><span>│  │  ├─ application.properties</span></span>
+<span class="line"><span>│  │  ├─ data.sql</span></span>
+<span class="line"><span>│  ├─ java/</span></span>
+<span class="line"><span>│  │  ├─ ru/</span></span>
+<span class="line"><span>│  │  │  ├─ atomskills/</span></span>
+<span class="line"><span>│  │  │  │  ├─ back/</span></span>
+<span class="line"><span>│  │  │  │  │  ├─ configs/</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ JwtAuthFilter.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ RestAdviser.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ SecurityConfig.java</span></span>
+<span class="line"><span>│  │  │  │  │  ├─ controllers/</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ AuthenticationController.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ LessonsController.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ SomeEntityController.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ TasksController.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ TopicsController.java</span></span>
+<span class="line"><span>│  │  │  │  │  ├─ dto/</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ AuthRequest.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ LessonDto.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ LessonShortDto.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ LoginResponse.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ RefreshRequest.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ TaskDto.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ TaskShortDto.java</span></span>
+<span class="line"><span>│  │  │  │  │  ├─ models/</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ AppUser.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ Feature.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ Lesson.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ Role.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ SomeEntity.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ Task.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ TaskProgress.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ TaskSubmission.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ Topic.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ Trait.java</span></span>
+<span class="line"><span>│  │  │  │  │  ├─ repositories/</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ AppUserRepository.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ FeaturesRepository.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ LessonsRepository.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ SomeEntityRepository.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ TaskProgressRepository.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ TasksRepository.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ TopicsRepository.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ TraitsRepository.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ specifications/</span></span>
+<span class="line"><span>│  │  │  │  │  │  │  ├─ SomeEntityRepositorySpecification.java</span></span>
+<span class="line"><span>│  │  │  │  │  ├─ services/</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ AppUserService.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ AuthenticationService.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ FileLoader.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ LessonsService.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ SomeEntity.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ TasksService.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ TopicsService.java</span></span>
+<span class="line"><span>│  │  │  │  │  ├─ utils/</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ FilesUtil.java</span></span>
+<span class="line"><span>│  │  │  │  │  │  ├─ JwtUtil.java</span></span>
+<span class="line"><span>│  │  │  │  │  ├─ BackApplication.java</span></span>
+<span class="line"><span>├─ test/</span></span>
+<span class="line"><span>│  ├─ java/</span></span>
+<span class="line"><span>│  │  ├─ ru/</span></span>
+<span class="line"><span>│  │  │  ├─ atomskills/</span></span>
+<span class="line"><span>│  │  │  │  ├─ back/</span></span>
+<span class="line"><span>│  │  │  │  │  ├─ BackApplicationTests.java</span></span>
+<span class="line"><span>Dockerfile</span></span>
+<span class="line"><span>pom.xml</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><br><h2 id="dockerfile" tabindex="-1"><a class="header-anchor" href="#dockerfile"><span>Dockerfile</span></a></h2><p>Файл с описанием команд для развертки с помощью Docker</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>FROM mirror.gcr.io/eclipse-temurin:21-jdk-jammy</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>WORKDIR /app</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>COPY .mvn/ .mvn</span></span>
+<span class="line"><span>COPY mvnw pom.xml ./</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>RUN sed -i &#39;s/\r$//&#39; ./mvnw &amp;&amp; chmod +x ./mvnw &amp;&amp; ./mvnw dependency:resolve</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>COPY src ./src</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>CMD [&quot;./mvnw&quot;, &quot;spring-boot:run&quot;]</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><br><h2 id="pom-xml" tabindex="-1"><a class="header-anchor" href="#pom-xml"><span>pom.xml</span></a></h2><p>Описывает конфигурацию проекта, используемые библиотеки, фреймворки и расширения</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span>
+<span class="line"><span>&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span>
+<span class="line"><span>	xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;</span></span>
+<span class="line"><span>	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</span></span>
+<span class="line"><span>	&lt;parent&gt;</span></span>
+<span class="line"><span>		&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span></span>
+<span class="line"><span>		&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</span></span>
+<span class="line"><span>		&lt;version&gt;3.3.0&lt;/version&gt;</span></span>
+<span class="line"><span>		&lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;</span></span>
+<span class="line"><span>	&lt;/parent&gt;</span></span>
+<span class="line"><span>	&lt;groupId&gt;ru.atomskills&lt;/groupId&gt;</span></span>
+<span class="line"><span>	&lt;artifactId&gt;back&lt;/artifactId&gt;</span></span>
+<span class="line"><span>	&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;</span></span>
+<span class="line"><span>	&lt;name&gt;back&lt;/name&gt;</span></span>
+<span class="line"><span>	&lt;description&gt;Demo project for Spring Boot&lt;/description&gt;</span></span>
+<span class="line"><span>	&lt;properties&gt;</span></span>
+<span class="line"><span>		&lt;java.version&gt;21&lt;/java.version&gt;</span></span>
+<span class="line"><span>	&lt;/properties&gt;</span></span>
+<span class="line"><span>	&lt;dependencies&gt;</span></span>
+<span class="line"><span>		&lt;dependency&gt;</span></span>
+<span class="line"><span>			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span></span>
+<span class="line"><span>			&lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;</span></span>
+<span class="line"><span>		&lt;/dependency&gt;</span></span>
+<span class="line"><span>		&lt;dependency&gt;</span></span>
+<span class="line"><span>			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span></span>
+<span class="line"><span>			&lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;</span></span>
+<span class="line"><span>		&lt;/dependency&gt;</span></span>
+<span class="line"><span>		&lt;dependency&gt;</span></span>
+<span class="line"><span>			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span></span>
+<span class="line"><span>			&lt;artifactId&gt;spring-boot-starter-validation&lt;/artifactId&gt;</span></span>
+<span class="line"><span>		&lt;/dependency&gt;</span></span>
+<span class="line"><span>		&lt;dependency&gt;</span></span>
+<span class="line"><span>			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span></span>
+<span class="line"><span>			&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span></span>
+<span class="line"><span>		&lt;/dependency&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>		&lt;dependency&gt;</span></span>
+<span class="line"><span>			&lt;groupId&gt;org.postgresql&lt;/groupId&gt;</span></span>
+<span class="line"><span>			&lt;artifactId&gt;postgresql&lt;/artifactId&gt;</span></span>
+<span class="line"><span>			&lt;scope&gt;runtime&lt;/scope&gt;</span></span>
+<span class="line"><span>		&lt;/dependency&gt;</span></span>
+<span class="line"><span>		&lt;dependency&gt;</span></span>
+<span class="line"><span>			&lt;groupId&gt;org.projectlombok&lt;/groupId&gt;</span></span>
+<span class="line"><span>			&lt;artifactId&gt;lombok&lt;/artifactId&gt;</span></span>
+<span class="line"><span>			&lt;optional&gt;true&lt;/optional&gt;</span></span>
+<span class="line"><span>		&lt;/dependency&gt;</span></span>
+<span class="line"><span>		&lt;dependency&gt;</span></span>
+<span class="line"><span>			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span></span>
+<span class="line"><span>			&lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span></span>
+<span class="line"><span>			&lt;scope&gt;test&lt;/scope&gt;</span></span>
+<span class="line"><span>		&lt;/dependency&gt;</span></span>
+<span class="line"><span>		&lt;dependency&gt;</span></span>
+<span class="line"><span>			&lt;groupId&gt;org.springframework.security&lt;/groupId&gt;</span></span>
+<span class="line"><span>			&lt;artifactId&gt;spring-security-test&lt;/artifactId&gt;</span></span>
+<span class="line"><span>			&lt;scope&gt;test&lt;/scope&gt;</span></span>
+<span class="line"><span>		&lt;/dependency&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>		&lt;dependency&gt;</span></span>
+<span class="line"><span>			&lt;groupId&gt;io.jsonwebtoken&lt;/groupId&gt;</span></span>
+<span class="line"><span>			&lt;artifactId&gt;jjwt-api&lt;/artifactId&gt;</span></span>
+<span class="line"><span>			&lt;version&gt;0.11.5&lt;/version&gt;</span></span>
+<span class="line"><span>		&lt;/dependency&gt;</span></span>
+<span class="line"><span>		&lt;dependency&gt;</span></span>
+<span class="line"><span>			&lt;groupId&gt;io.jsonwebtoken&lt;/groupId&gt;</span></span>
+<span class="line"><span>			&lt;artifactId&gt;jjwt-impl&lt;/artifactId&gt;</span></span>
+<span class="line"><span>			&lt;version&gt;0.11.5&lt;/version&gt;</span></span>
+<span class="line"><span>		&lt;/dependency&gt;</span></span>
+<span class="line"><span>		&lt;dependency&gt;</span></span>
+<span class="line"><span>			&lt;groupId&gt;io.jsonwebtoken&lt;/groupId&gt;</span></span>
+<span class="line"><span>			&lt;artifactId&gt;jjwt-jackson&lt;/artifactId&gt;</span></span>
+<span class="line"><span>			&lt;version&gt;0.11.5&lt;/version&gt;</span></span>
+<span class="line"><span>		&lt;/dependency&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>		&lt;dependency&gt;</span></span>
+<span class="line"><span>			&lt;groupId&gt;org.springdoc&lt;/groupId&gt;</span></span>
+<span class="line"><span>			&lt;artifactId&gt;springdoc-openapi-starter-webmvc-ui&lt;/artifactId&gt;</span></span>
+<span class="line"><span>			&lt;version&gt;2.5.0&lt;/version&gt;</span></span>
+<span class="line"><span>		&lt;/dependency&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>		&lt;dependency&gt;</span></span>
+<span class="line"><span>			&lt;groupId&gt;org.hibernate&lt;/groupId&gt;</span></span>
+<span class="line"><span>			&lt;artifactId&gt;hibernate-jpamodelgen&lt;/artifactId&gt;</span></span>
+<span class="line"><span>			&lt;version&gt;6.1.7.Final&lt;/version&gt;</span></span>
+<span class="line"><span>		&lt;/dependency&gt;</span></span>
+<span class="line"><span>	&lt;/dependencies&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>	&lt;build&gt;</span></span>
+<span class="line"><span>		&lt;plugins&gt;</span></span>
+<span class="line"><span>			&lt;plugin&gt;</span></span>
+<span class="line"><span>				&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span></span>
+<span class="line"><span>				&lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;</span></span>
+<span class="line"><span>				&lt;configuration&gt;</span></span>
+<span class="line"><span>					&lt;excludes&gt;</span></span>
+<span class="line"><span>						&lt;exclude&gt;</span></span>
+<span class="line"><span>							&lt;groupId&gt;org.projectlombok&lt;/groupId&gt;</span></span>
+<span class="line"><span>							&lt;artifactId&gt;lombok&lt;/artifactId&gt;</span></span>
+<span class="line"><span>						&lt;/exclude&gt;</span></span>
+<span class="line"><span>					&lt;/excludes&gt;</span></span>
+<span class="line"><span>				&lt;/configuration&gt;</span></span>
+<span class="line"><span>			&lt;/plugin&gt;</span></span>
+<span class="line"><span>		&lt;/plugins&gt;</span></span>
+<span class="line"><span>	&lt;/build&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;/project&gt;</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><br><h2 id="src-test-java-ru-atomskills-back-backapplicationtest-java" tabindex="-1"><a class="header-anchor" href="#src-test-java-ru-atomskills-back-backapplicationtest-java"><span>src/test/java/ru/atomskills/back/BackApplicationTest.java</span></a></h2><p>Данный файл запускает модуль тестирования JavaSpring приложения. <br><br></p><h2 id="src-main-java-ru-atomskills-back" tabindex="-1"><a class="header-anchor" href="#src-main-java-ru-atomskills-back"><span>src/main/java/ru/atomskills/back</span></a></h2><h3 id="configs" tabindex="-1"><a class="header-anchor" href="#configs"><span>configs</span></a></h3><p>Данная папка содержит различные конфигурации безопасности и работы с JWT.</p><hr><h4 id="jwtauthfilter-java" tabindex="-1"><a class="header-anchor" href="#jwtauthfilter-java"><span>JwtAuthFilter.java</span></a></h4><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>package ru.atomskills.back.configs;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>import jakarta.servlet.FilterChain;</span></span>
+<span class="line"><span>import jakarta.servlet.ServletException;</span></span>
+<span class="line"><span>import jakarta.servlet.http.HttpServletRequest;</span></span>
+<span class="line"><span>import jakarta.servlet.http.HttpServletResponse;</span></span>
+<span class="line"><span>import lombok.RequiredArgsConstructor;</span></span>
+<span class="line"><span>import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;</span></span>
+<span class="line"><span>import org.springframework.security.core.context.SecurityContextHolder;</span></span>
+<span class="line"><span>import org.springframework.security.core.userdetails.UserDetails;</span></span>
+<span class="line"><span>import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;</span></span>
+<span class="line"><span>import org.springframework.stereotype.Component;</span></span>
+<span class="line"><span>import org.springframework.web.filter.OncePerRequestFilter;</span></span>
+<span class="line"><span>import ru.atomskills.back.services.AppUsersService;</span></span>
+<span class="line"><span>import ru.atomskills.back.utils.JwtUtil;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>import java.io.IOException;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>import static org.springframework.http.HttpHeaders.AUTHORIZATION;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>@Component</span></span>
+<span class="line"><span>@RequiredArgsConstructor</span></span>
+<span class="line"><span>public class JwtAuthFilter extends OncePerRequestFilter {</span></span>
+<span class="line"><span>    private final AppUsersService appUsersService;</span></span>
+<span class="line"><span>    private final JwtUtil jwtUtil;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Override</span></span>
+<span class="line"><span>    protected void doFilterInternal(</span></span>
+<span class="line"><span>            HttpServletRequest request,</span></span>
+<span class="line"><span>            HttpServletResponse response,</span></span>
+<span class="line"><span>            FilterChain filterChain</span></span>
+<span class="line"><span>    ) throws ServletException, IOException {</span></span>
+<span class="line"><span>        final String authHeader = request.getHeader(AUTHORIZATION);</span></span>
+<span class="line"><span>        final String username;</span></span>
+<span class="line"><span>        final String jwtToken;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        if (authHeader == null || !authHeader.startsWith(&quot;Bearer&quot;)) {</span></span>
+<span class="line"><span>            filterChain.doFilter(request, response);</span></span>
+<span class="line"><span>            return;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        jwtToken = authHeader.substring(7);</span></span>
+<span class="line"><span>        username = jwtUtil.extractUsername(jwtToken);</span></span>
+<span class="line"><span>        if (username != null &amp;&amp; SecurityContextHolder.getContext().getAuthentication() == null) {</span></span>
+<span class="line"><span>            UserDetails userDetails = appUsersService.loadUserByUsername(username);</span></span>
+<span class="line"><span>            final boolean isTokenValid = jwtUtil.isTokenValid(jwtToken, userDetails);</span></span>
+<span class="line"><span>            if (isTokenValid) {</span></span>
+<span class="line"><span>                UsernamePasswordAuthenticationToken authToken =</span></span>
+<span class="line"><span>                        new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());</span></span>
+<span class="line"><span>                authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));</span></span>
+<span class="line"><span>                SecurityContextHolder.getContext().setAuthentication(authToken);</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        filterChain.doFilter(request, response);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Override</span></span>
+<span class="line"><span>    protected boolean shouldNotFilter(HttpServletRequest request) {</span></span>
+<span class="line"><span>        String path = request.getServletPath();</span></span>
+<span class="line"><span>        return path.startsWith(&quot;/auth&quot;);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><br><h4 id="securityconfig-java" tabindex="-1"><a class="header-anchor" href="#securityconfig-java"><span>SecurityConfig.java</span></a></h4><p>Конфигурация безопасности приложения.<br><br> Для шифрования паролей используется встроенный метод bcrypt - адаптивная криптографическая хеш-функция формирования ключа, используемого для защищенного хранения паролей.</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>package ru.atomskills.back.configs;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>import lombok.RequiredArgsConstructor;</span></span>
+<span class="line"><span>import org.springframework.context.annotation.Bean;</span></span>
+<span class="line"><span>import org.springframework.context.annotation.Configuration;</span></span>
+<span class="line"><span>import org.springframework.http.HttpMethod;</span></span>
+<span class="line"><span>import org.springframework.security.authentication.AuthenticationManager;</span></span>
+<span class="line"><span>import org.springframework.security.authentication.AuthenticationProvider;</span></span>
+<span class="line"><span>import org.springframework.security.authentication.dao.DaoAuthenticationProvider;</span></span>
+<span class="line"><span>import org.springframework.security.config.Customizer;</span></span>
+<span class="line"><span>import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;</span></span>
+<span class="line"><span>import org.springframework.security.config.annotation.web.builders.HttpSecurity;</span></span>
+<span class="line"><span>import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;</span></span>
+<span class="line"><span>import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;</span></span>
+<span class="line"><span>import org.springframework.security.config.http.SessionCreationPolicy;</span></span>
+<span class="line"><span>import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;</span></span>
+<span class="line"><span>import org.springframework.security.web.SecurityFilterChain;</span></span>
+<span class="line"><span>import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;</span></span>
+<span class="line"><span>import org.springframework.web.cors.CorsConfiguration;</span></span>
+<span class="line"><span>import org.springframework.web.cors.CorsConfigurationSource;</span></span>
+<span class="line"><span>import org.springframework.web.cors.UrlBasedCorsConfigurationSource;</span></span>
+<span class="line"><span>import ru.atomskills.back.services.AppUsersService;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>import java.util.List;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>@Configuration</span></span>
+<span class="line"><span>@EnableWebSecurity</span></span>
+<span class="line"><span>@RequiredArgsConstructor</span></span>
+<span class="line"><span>public class SecurityConfig {</span></span>
+<span class="line"><span>    private final JwtAuthFilter jwtAuthFilter;</span></span>
+<span class="line"><span>    private final AppUsersService appUsersService;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Bean</span></span>
+<span class="line"><span>    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {</span></span>
+<span class="line"><span>        http</span></span>
+<span class="line"><span>            .cors(Customizer.withDefaults())</span></span>
+<span class="line"><span>            .csrf(AbstractHttpConfigurer::disable)</span></span>
+<span class="line"><span>            .authorizeHttpRequests((authorize) -&gt; authorize</span></span>
+<span class="line"><span>//                .requestMatchers(&quot;/auth/**&quot;, &quot;/swagger-ui/**&quot;, &quot;/v3/api-docs/**&quot;).permitAll()</span></span>
+<span class="line"><span>//                .requestMatchers(HttpMethod.POST, &quot;/entities/**&quot;).hasRole(&quot;ADMIN&quot;)</span></span>
+<span class="line"><span>//                .requestMatchers(HttpMethod.PUT, &quot;/entities/**&quot;).hasRole(&quot;ADMIN&quot;)</span></span>
+<span class="line"><span>//                .requestMatchers(HttpMethod.DELETE, &quot;/entities/**&quot;).hasRole(&quot;ADMIN&quot;)</span></span>
+<span class="line"><span>//                .anyRequest().authenticated()</span></span>
+<span class="line"><span>                            .anyRequest().permitAll()</span></span>
+<span class="line"><span>            )</span></span>
+<span class="line"><span>            .sessionManagement((session) -&gt; session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))</span></span>
+<span class="line"><span>            .authenticationProvider(authenticationProvider())</span></span>
+<span class="line"><span>            .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);</span></span>
+<span class="line"><span>        return http.build();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Bean</span></span>
+<span class="line"><span>    public AuthenticationProvider authenticationProvider() {</span></span>
+<span class="line"><span>        final DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();</span></span>
+<span class="line"><span>        authenticationProvider.setUserDetailsService(appUsersService);</span></span>
+<span class="line"><span>        authenticationProvider.setPasswordEncoder(bCryptPasswordEncoder());</span></span>
+<span class="line"><span>        return authenticationProvider;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Bean</span></span>
+<span class="line"><span>    public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception{</span></span>
+<span class="line"><span>        return authenticationConfiguration.getAuthenticationManager();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Bean</span></span>
+<span class="line"><span>    public BCryptPasswordEncoder bCryptPasswordEncoder() {</span></span>
+<span class="line"><span>        return new BCryptPasswordEncoder();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Bean</span></span>
+<span class="line"><span>    CorsConfigurationSource corsConfigurationSource() {</span></span>
+<span class="line"><span>        CorsConfiguration configuration = new CorsConfiguration();</span></span>
+<span class="line"><span>        configuration.setAllowedOrigins(List.of(&quot;*&quot;));</span></span>
+<span class="line"><span>        configuration.setAllowedMethods(List.of(&quot;*&quot;));</span></span>
+<span class="line"><span>        configuration.setAllowedHeaders(List.of(&quot;*&quot;));</span></span>
+<span class="line"><span>        configuration.setExposedHeaders(List.of(&quot;*&quot;));</span></span>
+<span class="line"><span>        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();</span></span>
+<span class="line"><span>        source.registerCorsConfiguration(&quot;/**&quot;, configuration);</span></span>
+<span class="line"><span>        return source;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><br><br></p><h3 id="controllers" tabindex="-1"><a class="header-anchor" href="#controllers"><span>controllers</span></a></h3><p>Содержит контроллеры в виде API.</p><hr><h4 id="authenticationcontroller-java" tabindex="-1"><a class="header-anchor" href="#authenticationcontroller-java"><span>AuthenticationController.java</span></a></h4><p>Контроллер для работы с авторизацией и регистрацией. Подробнее по <a class="route-link" href="/atom_docs/api/auth.html">ссылке</a>.</p><h4 id="lessonscontroller-java" tabindex="-1"><a class="header-anchor" href="#lessonscontroller-java"><span>LessonsController.java</span></a></h4><p>Контроллер для работы с моделями учебных материалов. Подробнее по <a class="route-link" href="/atom_docs/api/lessons.html">ссылке</a>.</p><h4 id="taskscontroller-java" tabindex="-1"><a class="header-anchor" href="#taskscontroller-java"><span>TasksController.java</span></a></h4><p>Контроллер для работы с моделями заданий. Подробнее по <a class="route-link" href="/atom_docs/api/tasks.html">ссылке</a>.</p><h4 id="topicscontroller-java" tabindex="-1"><a class="header-anchor" href="#topicscontroller-java"><span>TopicsController.java</span></a></h4><p>Контроллер для работы с моделями тем. Подробнее по <a class="route-link" href="/atom_docs/api/topics.html">ссылке</a>. <br><br></p><h3 id="dto" tabindex="-1"><a class="header-anchor" href="#dto"><span>dto</span></a></h3><p>Содержит модели промежуточных данных, передаваемых из Frontend в Backend.</p><hr><h4 id="authrequest-java" tabindex="-1"><a class="header-anchor" href="#authrequest-java"><span>AuthRequest.java</span></a></h4><p>Промежуточная модель данных авторизации</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>package ru.atomskills.back.dto;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>import lombok.Data;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>@Data</span></span>
+<span class="line"><span>public class AuthRequest {</span></span>
+<span class="line"><span>    private String username;</span></span>
+<span class="line"><span>    private String password;</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="lessondto-java" tabindex="-1"><a class="header-anchor" href="#lessondto-java"><span>LessonDto.java</span></a></h4><p>Промежуточная модель данных учебного материала.</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>package ru.atomskills.back.dto;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>import lombok.Builder;</span></span>
+<span class="line"><span>import lombok.Data;</span></span>
+<span class="line"><span>import ru.atomskills.back.models.Lesson;</span></span>
+<span class="line"><span>import ru.atomskills.back.models.Task;</span></span>
+<span class="line"><span>import ru.atomskills.back.models.Topic;</span></span>
+<span class="line"><span>import ru.atomskills.back.models.Trait;</span></span>
+<span class="line"><span>import ru.atomskills.back.services.LessonsService;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>import java.util.List;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>@Data</span></span>
+<span class="line"><span>@Builder</span></span>
+<span class="line"><span>public class LessonDto {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private String code;</span></span>
+<span class="line"><span>    private String title;</span></span>
+<span class="line"><span>    private String content;</span></span>
+<span class="line"><span>    private List&lt;Trait&gt; traits;</span></span>
+<span class="line"><span>    private List&lt;Lesson.Supplement&gt; supplement;</span></span>
+<span class="line"><span>    private List&lt;TaskShortDto&gt; tasks;</span></span>
+<span class="line"><span>    private String author;</span></span>
+<span class="line"><span>    private List&lt;Topic&gt; topics;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static LessonDto fromEntity(Lesson lesson) {</span></span>
+<span class="line"><span>        return LessonDto.builder()</span></span>
+<span class="line"><span>                .code(lesson.getCode())</span></span>
+<span class="line"><span>                .title(lesson.getTitle())</span></span>
+<span class="line"><span>                .content(lesson.getContent())</span></span>
+<span class="line"><span>                .traits(lesson.getTraits())</span></span>
+<span class="line"><span>                .supplement(lesson.getSupplement())</span></span>
+<span class="line"><span>                .tasks(lesson.getTasks().stream().map(TaskShortDto::fromEntity).toList())</span></span>
+<span class="line"><span>                .author(lesson.getAuthor())</span></span>
+<span class="line"><span>                .topics(lesson.getTopics())</span></span>
+<span class="line"><span>                .build();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="lessonshortdto-java" tabindex="-1"><a class="header-anchor" href="#lessonshortdto-java"><span>LessonShortDto.java</span></a></h4><p>Представляет промежуточную модель данных учебных материалов с сокращенной информацией по ней.</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>package ru.atomskills.back.dto;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>import lombok.Builder;</span></span>
+<span class="line"><span>import lombok.Data;</span></span>
+<span class="line"><span>import ru.atomskills.back.models.Lesson;</span></span>
+<span class="line"><span>import ru.atomskills.back.models.Trait;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>import java.util.List;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>@Data</span></span>
+<span class="line"><span>@Builder</span></span>
+<span class="line"><span>public class LessonShortDto {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private String code;</span></span>
+<span class="line"><span>    private String title;</span></span>
+<span class="line"><span>    private List&lt;Trait&gt; traits;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static LessonShortDto fromEntity(Lesson lesson) {</span></span>
+<span class="line"><span>        return LessonShortDto.builder()</span></span>
+<span class="line"><span>                .code(lesson.getCode())</span></span>
+<span class="line"><span>                .title(lesson.getTitle())</span></span>
+<span class="line"><span>                .traits(lesson.getTraits())</span></span>
+<span class="line"><span>                .build();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="loginresponse-java" tabindex="-1"><a class="header-anchor" href="#loginresponse-java"><span>LoginResponse.java</span></a></h4><p>Представляет промежуточную модель данных ответа на запрос авторизации.</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>package ru.atomskills.back.dto;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>import lombok.Builder;</span></span>
+<span class="line"><span>import lombok.Data;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>@Data</span></span>
+<span class="line"><span>@Builder</span></span>
+<span class="line"><span>public class LoginResponse {</span></span>
+<span class="line"><span>    private String token;</span></span>
+<span class="line"><span>    private String refreshToken;</span></span>
+<span class="line"><span>    private long expiresIn;</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="refreshrequest-java" tabindex="-1"><a class="header-anchor" href="#refreshrequest-java"><span>RefreshRequest.java</span></a></h4><p>Представляет промежуточную модель данных на обновление JWT токена.</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>package ru.atomskills.back.dto;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>import lombok.Data;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>@Data</span></span>
+<span class="line"><span>public class RefreshRequest {</span></span>
+<span class="line"><span>    private String refreshToken;</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="taskdto-java" tabindex="-1"><a class="header-anchor" href="#taskdto-java"><span>TaskDto.java</span></a></h4><p>Представляет промежуточную модель данных задания.</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>package ru.atomskills.back.dto;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>import lombok.Data;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>@Data</span></span>
+<span class="line"><span>public class RefreshRequest {</span></span>
+<span class="line"><span>    private String refreshToken;</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="taskshortdto-java" tabindex="-1"><a class="header-anchor" href="#taskshortdto-java"><span>TaskShortDto.java</span></a></h4><p>Представляет промежуточную модель данных задания с скоращенной информацией по ней.</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>package ru.atomskills.back.dto;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>import lombok.Builder;</span></span>
+<span class="line"><span>import lombok.Data;</span></span>
+<span class="line"><span>import ru.atomskills.back.models.Task;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>@Data</span></span>
+<span class="line"><span>@Builder</span></span>
+<span class="line"><span>public class TaskShortDto {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private String code;</span></span>
+<span class="line"><span>    private String title;</span></span>
+<span class="line"><span>    private Integer difficulty;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static TaskShortDto fromEntity(Task task) {</span></span>
+<span class="line"><span>        return TaskShortDto.builder()</span></span>
+<span class="line"><span>                .code(task.getCode())</span></span>
+<span class="line"><span>                .title(task.getTitle())</span></span>
+<span class="line"><span>                .difficulty(task.getDifficulty())</span></span>
+<span class="line"><span>                .build();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><br><br></p><h3 id="models">models</h3> Содержит модели данных, сохраняемые в базу данных. <hr><h4 id="appuser-java" tabindex="-1"><a class="header-anchor" href="#appuser-java"><span>AppUser.java</span></a></h4><p>Модель данных пользователя системы</p><h4 id="feature-java" tabindex="-1"><a class="header-anchor" href="#feature-java"><span>Feature.java</span></a></h4><p>Модель данных пользователя системы. Загружается из файлов окружения.</p><h4 id="lesson-java" tabindex="-1"><a class="header-anchor" href="#lesson-java"><span>Lesson.java</span></a></h4><p>Модель данных пользователя системы. Загружается из файлов окружения.</p><h4 id="role-java" tabindex="-1"><a class="header-anchor" href="#role-java"><span>Role.java</span></a></h4><p>Модель данных пользователя системы. Инициализируется при запуске приложения начальными данными. Всего две роли:</p><ul><li>Обучающийся;</li><li>Наставник;</li></ul><h4 id="task-java" tabindex="-1"><a class="header-anchor" href="#task-java"><span>Task.java</span></a></h4><p>Модель данных пользователя системы. Загружается из файлов окружения.</p><h4 id="taskprogress-java" tabindex="-1"><a class="header-anchor" href="#taskprogress-java"><span>TaskProgress.java</span></a></h4><p>Модель данных пользователя системы</p><h4 id="tasksubmission-java" tabindex="-1"><a class="header-anchor" href="#tasksubmission-java"><span>TaskSubmission.java</span></a></h4><p>Модель данных пользователя системы</p><h4 id="topic-java" tabindex="-1"><a class="header-anchor" href="#topic-java"><span>Topic.java</span></a></h4><p>Модель данных пользователя системы. Загружается из файлов окружения.</p><h4 id="trait-java" tabindex="-1"><a class="header-anchor" href="#trait-java"><span>Trait.java</span></a></h4><p>Модель данных пользователя системы. Загружается из файлов окружения. <br><br></p><h3 id="repositories" tabindex="-1"><a class="header-anchor" href="#repositories"><span>repositories</span></a></h3><p>Содержит репозитории для запросов из базы данных. Структура аналогична структуре <a href="#models">models</a>. <br><br></p><h3 id="services" tabindex="-1"><a class="header-anchor" href="#services"><span>services</span></a></h3><p>Содержит бизнес-логику для работы с моделями</p><hr><h4 id="appuserservice-java" tabindex="-1"><a class="header-anchor" href="#appuserservice-java"><span>AppUserService.java</span></a></h4><p>Сервис для работы с моделью пользователя.</p><h4 id="authenticationservice-java" tabindex="-1"><a class="header-anchor" href="#authenticationservice-java"><span>AuthenticationService.java</span></a></h4><p>Сервис для работы с моделью пользователя.</p><h4 id="fileloader-java" tabindex="-1"><a class="header-anchor" href="#fileloader-java"><span>FileLoader.java</span></a></h4><p>Сервис для работы с моделью пользователя.</p><h4 id="lessonsservice-java" tabindex="-1"><a class="header-anchor" href="#lessonsservice-java"><span>LessonsService.java</span></a></h4><p>Сервис для работы с моделью пользователя.</p><h4 id="tasksservice-java" tabindex="-1"><a class="header-anchor" href="#tasksservice-java"><span>TasksService.java</span></a></h4><p>Сервис для работы с моделью пользователя.</p><h4 id="topicsservice-java" tabindex="-1"><a class="header-anchor" href="#topicsservice-java"><span>TopicsService.java</span></a></h4><p>Сервис для работы с моделью пользователя. <br><br></p><h3 id="utils" tabindex="-1"><a class="header-anchor" href="#utils"><span>utils</span></a></h3><p>Утилиты для работа с файлами и JWT токенами.</p><hr><h4 id="filesutil-java" tabindex="-1"><a class="header-anchor" href="#filesutil-java"><span>FilesUtil.java</span></a></h4><p>Работа с файлами.</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>package ru.atomskills.back.utils;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>import org.springframework.core.io.PathResource;</span></span>
+<span class="line"><span>import org.springframework.core.io.Resource;</span></span>
+<span class="line"><span>import org.springframework.web.multipart.MultipartFile;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>import java.io.IOException;</span></span>
+<span class="line"><span>import java.io.InputStream;</span></span>
+<span class="line"><span>import java.nio.file.Files;</span></span>
+<span class="line"><span>import java.nio.file.Path;</span></span>
+<span class="line"><span>import java.nio.file.Paths;</span></span>
+<span class="line"><span>import java.nio.file.StandardCopyOption;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>public class FilesUtil {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private final static String BASE_DIR = &quot;files&quot;;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void saveFile(String path, String fileName, MultipartFile multipartFile) throws IOException {</span></span>
+<span class="line"><span>        Path uploadPath = Paths.get(BASE_DIR, path);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        if (!Files.exists(uploadPath)) {</span></span>
+<span class="line"><span>            Files.createDirectories(uploadPath);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        try (InputStream inputStream = multipartFile.getInputStream()) {</span></span>
+<span class="line"><span>            Path filePath = uploadPath.resolve(fileName);</span></span>
+<span class="line"><span>            Files.copy(inputStream, filePath, StandardCopyOption.REPLACE_EXISTING);</span></span>
+<span class="line"><span>        } catch (IOException ioe) {</span></span>
+<span class="line"><span>            throw new IOException(&quot;Could not save file: &quot; + fileName, ioe);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static Resource getFile(String path, String fileName) {</span></span>
+<span class="line"><span>        return new PathResource(Paths.get(BASE_DIR, path, fileName));</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="jwtutil-java" tabindex="-1"><a class="header-anchor" href="#jwtutil-java"><span>JwtUtil.java</span></a></h4><p>Работа с JWT токенами.</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>package ru.atomskills.back.utils;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>import io.jsonwebtoken.Claims;</span></span>
+<span class="line"><span>import io.jsonwebtoken.Jwts;</span></span>
+<span class="line"><span>import io.jsonwebtoken.SignatureAlgorithm;</span></span>
+<span class="line"><span>import io.jsonwebtoken.security.Keys;</span></span>
+<span class="line"><span>import org.springframework.security.core.userdetails.UserDetails;</span></span>
+<span class="line"><span>import org.springframework.stereotype.Component;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>import javax.crypto.SecretKey;</span></span>
+<span class="line"><span>import java.util.Date;</span></span>
+<span class="line"><span>import java.util.concurrent.TimeUnit;</span></span>
+<span class="line"><span>import java.util.function.Function;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>@Component</span></span>
+<span class="line"><span>public class JwtUtil {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private static final Long EXPIRATION_TIME = TimeUnit.HOURS.toMillis(1);</span></span>
+<span class="line"><span>    private static final Long REFRESH_EXPIRATION_TIME = TimeUnit.DAYS.toMillis(1);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private final SecretKey key = Keys.secretKeyFor(SignatureAlgorithm.HS256);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public String extractUsername(String token) {</span></span>
+<span class="line"><span>        return extractClaim(token, Claims::getSubject);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public Date extractExpiration(String token) {</span></span>
+<span class="line"><span>        return extractClaim(token, Claims::getExpiration);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public boolean hasClaim(String token, String claimName) {</span></span>
+<span class="line"><span>        final Claims claims = extractAllClaims(token);</span></span>
+<span class="line"><span>        return claims.get(claimName) != null;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private &lt;T&gt; T extractClaim(String token, Function&lt;Claims, T&gt; claimsResolver) {</span></span>
+<span class="line"><span>        final Claims claims = extractAllClaims(token);</span></span>
+<span class="line"><span>        return claimsResolver.apply(claims);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Claims extractAllClaims(String token) {</span></span>
+<span class="line"><span>        return Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token).getBody();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public boolean isTokenExpired(String token) {</span></span>
+<span class="line"><span>        return extractExpiration(token).before(new Date());</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public String generateAccessToken(UserDetails userDetails) {</span></span>
+<span class="line"><span>        return Jwts.builder()</span></span>
+<span class="line"><span>                .setSubject(userDetails.getUsername())</span></span>
+<span class="line"><span>                .claim(&quot;authorities&quot;, userDetails.getAuthorities())</span></span>
+<span class="line"><span>                .setIssuedAt(new Date(System.currentTimeMillis()))</span></span>
+<span class="line"><span>                .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))</span></span>
+<span class="line"><span>                .signWith(key).compact();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public String generateRefreshToken(UserDetails userDetails) {</span></span>
+<span class="line"><span>        return Jwts.builder()</span></span>
+<span class="line"><span>                .setSubject(userDetails.getUsername())</span></span>
+<span class="line"><span>                .setExpiration(new Date(System.currentTimeMillis() + REFRESH_EXPIRATION_TIME))</span></span>
+<span class="line"><span>                .signWith(key)</span></span>
+<span class="line"><span>                .compact();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public long getExpirationTime() {</span></span>
+<span class="line"><span>        return EXPIRATION_TIME;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public boolean isTokenValid(String token, UserDetails userDetails) {</span></span>
+<span class="line"><span>        final String username = extractUsername(token);</span></span>
+<span class="line"><span>        return (username.equals(userDetails.getUsername()) &amp;&amp; !isTokenExpired(token));</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div><!----><footer class="vp-page-meta"><!----><div class="vp-meta-item git-info"><div class="update-time"><span class="vp-meta-label">Последнее обновление: </span><!----></div><div class="contributors"><span class="vp-meta-label">Контрибьюторы: </span><!--[--><!--[--><span class="vp-meta-info" title="email: karelio2001@mail.ru">karen</span><!--]--><!--]--></div></div></footer><nav class="vp-page-nav"><a class="route-link auto-link prev" href="/atom_docs/project/frontend.html" aria-label="Frontend-проект"><div class="hint"><span class="arrow start"></span>Предыдущая</div><div class="link"><!---->Frontend-проект</div></a><!----></nav><!----><!----><!--]--></main><!--]--><!----></div><!--]--><!--]--><!--[--><!----><!--]--><!--]--></div>
+    <script type="module" src="/atom_docs/assets/app-Chc13kEl.js" defer></script>
+  </body>
+</html>
